@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11ty Boilerplate</title>
+  <link rel="stylesheet" href="/styles/screen.css">
+  <script defer src="https://cdn.jsdelivr.net/gh/hankhank10/alpine-fetch@main/alpine-fetch.js"></script>
+  <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+<body>
+    
+<div x-data="{ thumbnailImage: '' }" x-init="$fetchjson('https://dummyjson.com/products/1', jsonItem='thumbnail').then(data => thumbnailImage = data)">
+    <img x-bind:src="thumbnailImage" alt="thumbnail" />
+</div>
+
+
+<div x-data="{ title: '' }" x-init="$fetchjson('https://dummyjson.com/products/1', jsonItem='title').then(data => title = data)">
+    <h2 x-text="title"></h2>
+</div>
+
+<div x-data="{ description: '' }" x-init="$fetchjson('https://dummyjson.com/products/1', jsonItem='description').then(data => description = data)">
+    <h2 x-text="description"></h2>
+</div>
+
+<div x-data="{ thumbnailImage: '' }" x-init="$fetchjson('https://dummyjson.com/products/2', jsonItem='thumbnail').then(data => thumbnailImage = data)">
+    <img x-bind:src="thumbnailImage" alt="thumbnail" />
+</div>
+
+
+<div x-data="{ title: '' }" x-init="$fetchjson('https://dummyjson.com/products/2', jsonItem='title').then(data => title = data)">
+    <h2 x-text="title"></h2>
+</div>
+
+<div x-data="{ description: '' }" x-init="$fetchjson('https://dummyjson.com/products/2', jsonItem='description').then(data => description = data)">
+    <h2 x-text="description"></h2>
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>
